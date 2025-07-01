@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Travellian</title>
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="public/img/logo.svg" alt="Travellian">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="nav-login">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Start your unforgettable journey with us.</h1>
+            <p>The best travel for your journey begins now</p>
+        </div>
+
+        <div class="travel-form">
+            <form>
+                <div>
+                    <label for="destination">DESTINATION</label>
+                    <input type="text" id="destination" placeholder="Destination" name="placeToGo">
+                </div>
+                <div>
+                    <label for="select-persons">PERSON</label>
+                    <select name="persons" id="select-persons">
+                        <option value="num-of-people">Choose an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="check-in">CHECK IN</label>
+                    <input type="date" id="check-in" min="2025-01-07" name="checkIn">
+                </div>
+                <div>
+                    <label for="check-out">CHECK OUT</label>
+                    <input type="date" id="check-out" min="2025-02-07" name="checkOut">
+                </div>
+                <button class="book-now" type="submit">Book Now</button>
+            </form>
+        </div>
+        <div class="slider">
+            <img src="/public/img/slider.svg" alt="slider">
+        </div>
+    </header>
+</body>
+
+</html>

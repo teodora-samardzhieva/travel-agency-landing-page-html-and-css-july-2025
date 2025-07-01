@@ -1,0 +1,177 @@
+/* Main styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* resets */
+body,
+p {
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* common styles */
+.site-content {
+    width: 1180px;
+    margin: auto;
+}
+
+/* Header With Background */
+.hero {
+    background-image: url('/public/img/hero-section-bg.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+/* Navigation */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 41px 182px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo img{
+    width: 235px;
+    height: 45px;
+    /* aspect-ratio: auto 235 / 45; */
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Rubik';
+    /* cursor: pointer; */
+}
+
+.signup-btn {
+    background-color: #FF7757;
+    border: none;
+    padding: 20px 32px;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    /* cursor: pointer; */
+}
+
+.login-btn {
+    background-color: transparent;
+    padding: 20px 36px 20px 0;
+    color: white;
+    border-color: transparent;
+    font-size: 20px;
+    /* cursor: pointer; */
+}
+
+/* Main Content */
+.hero-content {
+    position: absolute;
+    position: absolute;
+    top: 270px;
+    padding-left: 182px;
+    text-align: start;
+    max-width: 1200px;
+}
+
+.hero-content h1 {
+    font-size: 82px;
+    color: white;
+    font-family: 'Playfair Display';
+    font-weight: 100;
+}
+
+.hero-content p {
+    margin-top: 16px;
+    font-size: 24px;
+    font-family: 'Rubik';
+    color: white;
+}
+
+/* Travel form */
+.travel-form {
+    position: absolute;
+    top: 700px;
+    left: 0;
+    background-color: white;
+    /* padding: 74px 100px 74px 182px; */
+    padding-left: 182px;
+    /* padding: top | right | bottom | left */
+    border-radius: 0 15px 15px 0;
+
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.travel-form form {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.travel-form input,
+.travel-form select {
+    min-width: 225px;
+    border: 0;
+    font-family: 'Playfair Display';
+    font-size: 20px;
+    border-bottom: 1px solid #172432;
+}
+
+.travel-form form label {
+    font-family: 'Rubik';
+    font-size: 16px;
+    color: #767E86;
+}
+
+.travel-form form div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.book-now {
+    background-color: #FF7757;
+    color: white;
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    align-content: center;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    /* border-radius: top-left corner | top-right corner | bottom-right corner | bottom-left corner */
+    padding: 60px 53px 60px 0; /* padding: top | right | bottom | left */
+    max-width: 170px;
+}
+
+.slider {
+    position: static;
+    justify-self: end;
+    padding-top: 483px;
+    padding-right: 80px;
+}

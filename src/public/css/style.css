@@ -33,6 +33,7 @@ ul {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100vw;
     color: white;
     position: relative;
 }
@@ -44,7 +45,7 @@ ul {
     align-items: center;
     padding: 41px 182px;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
 }
@@ -66,7 +67,7 @@ ul {
     text-decoration: none;
     font-size: 20px;
     font-family: 'Rubik';
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .signup-btn {
@@ -76,7 +77,7 @@ ul {
     color: white;
     border-radius: 12px;
     font-size: 20px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .login-btn {
@@ -85,13 +86,28 @@ ul {
     color: white;
     border-color: transparent;
     font-size: 20px;
-    /* cursor: pointer; */
+    cursor: pointer;
+}
+
+#hamburger-menu, 
+#hamburger menu img {    
+    display: none;
+    position: relative;
+    cursor: pointer; 
 }
 
 /* Main Content */
+.hero {
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+}
+
 .hero-content {
     position: absolute;
-    position: absolute;
+    left: 0; 
     top: 270px;
     padding-left: 182px;
     text-align: start;
@@ -113,31 +129,43 @@ ul {
 }
 
 /* Travel form */
+
 .travel-form {
     position: absolute;
-    top: 700px;
     left: 0;
-    background-color: white;
-    /* padding: 74px 100px 74px 182px; */
-    padding-left: 182px;
-    /* padding: top | right | bottom | left */
-    border-radius: 0 15px 15px 0;
-
-    display: flex;
-    gap: 100px;
-    flex-direction: row;
+    top: 700px;
 }
 
-.travel-form form {
+form {
     display: flex;
+    align-items: stretch;
+    position: absolute;
+    flex-flow: row nowrap;
+    border-radius: 0 15px 15px 0;
+    background-color: white;
+    left: 0;
+    padding-left: 182px;
+}
+
+.travel-form-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    padding: 74px 100px 74px 0;
+
+    margin: auto 0; /* vertically center only this wrapper */
+}
+
+.travel-form-wrapper div {
+    display: flex;
+    flex-direction: column;
+    height: 65px;
 }
 
 .travel-form input,
 .travel-form select {
-    min-width: 225px;
+    max-width: 225px;
     border: 0;
     font-family: 'Playfair Display';
     font-size: 20px;
@@ -150,12 +178,6 @@ ul {
     color: #767E86;
 }
 
-.travel-form form div {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
 .book-now {
     background-color: #FF7757;
     color: white;
@@ -166,12 +188,186 @@ ul {
     border-radius: 0 15px 15px 0;
     /* border-radius: top-left corner | top-right corner | bottom-right corner | bottom-left corner */
     padding: 60px 53px 60px 0; /* padding: top | right | bottom | left */
-    max-width: 170px;
+    width: 170px;
 }
 
 .slider {
-    position: static;
-    justify-self: end;
-    padding-top: 483px;
-    padding-right: 80px;
+    margin-right: -95%;
+}
+
+@media screen and (max-width: 1440px) {
+    .nav-bar {
+        padding: 41px 32px;
+    }
+
+    .hero-content, .travel-form {
+        padding-left: 32px;
+    }
+
+    .travel-form form {
+        padding-left: 0;
+    }
+
+    .travel-form-wrapper {
+        padding-left: 32px;
+    }
+}
+
+@media screen and (max-width: 1280px) { 
+    .nav-bar {
+        padding: 41px 32px;
+    }
+
+    .nav-links ul{
+        gap: 20px;
+    }
+
+    .travel-form {
+        top: 554px;
+    }
+
+    .travel-form-wrapper {
+        padding: 23px 50px 23px 32px;
+    }
+
+    .book-now{
+        padding: 40px 53px 40px 20px;
+        width: 150px;
+    }
+
+    .hero {
+        height: 76vh;
+    }
+
+    .hero-content {
+        top: 200px;
+        left: 0;
+        max-width: 800px;
+    }
+
+    .hero-content h1 {
+        font-size: 64px;
+    }
+
+    .travel-form input,
+    .travel-form select {
+        max-width: 170px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .travel-form-wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 23px 100px 23px 32px;
+        gap: 43px;
+    }
+
+    #hamburger-menu,
+    #hamburger-menu img{  
+        display: block;
+    }
+
+    .nav-links, 
+    .nav-login {
+        display: none;
+    }
+
+    .travel-form input,
+    .travel-form select {
+        max-width: 225px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .travel-form {
+        top: 500px;
+        position: absolute;
+        padding: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .travel-form form {
+        padding: 0;
+        position: relative;
+        width: 100%;
+        flex-flow: column;
+        justify-items: stretch;
+        border-radius: 15px; 
+    }
+
+    .travel-form-wrapper {
+        padding: 40px;
+    }
+
+    .book-now {
+        padding: 40px 53px 40px 0px;
+        width: 100%;
+        border-radius: 0 0 15px 15px; 
+    }
+
+    .hero {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .hero-content {
+        top: 198px;
+        max-width: 700px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen  and (max-width: 600px){
+    .hero-content {
+        top: 180px;
+        max-width: 500px;
+        padding-left: 32px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 21px;
+    }
+
+    .travel-form {
+        top: 450px;
+    }
+
+    .travel-form-wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        padding: 25px 40px 80px 40px;
+        gap: 43px;
+    }
+
+    .slider {
+        display: none;
+    }
+}
+
+@media screen  and (max-width: 460px){
+    .hero-content {
+        max-width: 400px;
+        padding-left: 16px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .travel-form-wrapper {
+        padding: 25px 30px 80px 30px;
+    }
 }

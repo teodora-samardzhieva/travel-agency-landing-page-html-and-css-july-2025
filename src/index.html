@@ -31,6 +31,9 @@
                 <button class="login-btn">Login</button>
                 <button class="signup-btn">Sign Up</button>
             </div>
+            <div id="hamburger-menu">
+                <img src="/public/img/hamburger-menu.svg" alt="hamburger-menu">
+            </div>
         </nav>
         <div class="hero-content">
             <h1>Start your unforgettable journey with us.</h1>
@@ -39,33 +42,39 @@
 
         <div class="travel-form">
             <form>
-                <div>
-                    <label for="destination">DESTINATION</label>
-                    <input type="text" id="destination" placeholder="Destination" name="placeToGo">
-                </div>
-                <div>
-                    <label for="select-persons">PERSON</label>
-                    <select name="persons" id="select-persons">
-                        <option value="num-of-people">Choose an option</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="check-in">CHECK IN</label>
-                    <input type="date" id="check-in" min="2025-01-07" name="checkIn">
-                </div>
-                <div>
-                    <label for="check-out">CHECK OUT</label>
-                    <input type="date" id="check-out" min="2025-02-07" name="checkOut">
+                <div class="travel-form-wrapper">
+                    <div>
+                        <label for="destination">DESTINATION</label>
+                        <br>
+                        <input type="text" id="destination" placeholder="Destination" name="placeToGo">
+                    </div>
+                    <div>
+                        <label for="select-persons">PERSON</label>
+                        <br>
+                        <select name="persons" id="select-persons">
+                            <option value="num-of-people">Choose an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="check-in">CHECK IN</label>
+                        <br>
+                        <input type="date" id="check-in" min="2025-01-07" name="checkIn">
+                    </div>
+                    <div>
+                        <label for="check-out">CHECK OUT</label>
+                        <br>
+                        <input type="date" id="check-out" min="2025-02-07" name="checkOut">
+                    </div>
                 </div>
                 <button class="book-now" type="submit">Book Now</button>
             </form>
